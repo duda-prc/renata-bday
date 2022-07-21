@@ -8,9 +8,34 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
   </head>
 
   <body>
+
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
+      <div class="container-fluid">
+        <%= link_to "#infos-section", class: "navbar-brand" do %>
+          <%= image_tag "renata_logo.png", alt:"logo Renata" %>
+        <% end %>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item active">
+                <%= link_to "Infos", "#infos-section", class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Messages', "#comments-section", class: "nav-link"%>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
     <%= yield %>
   </body>
 </html>
