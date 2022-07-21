@@ -1,16 +1,18 @@
 class CommentsController < ApplicationController
 
   def index
-    @comment = Comment.new
     @comments = Comment.all
+    @comment = Comment.new
   end
 
   def create
     @comment = Comment.new(comment_params)
+
     if @comment.save
-      redirect_to @comment
+      redirect_to comments_path
     else
-      render :show
+      @comments = Comment.all
+      render :index
     end
   end
 
