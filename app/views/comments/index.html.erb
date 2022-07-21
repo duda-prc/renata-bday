@@ -37,9 +37,10 @@
   </div>
 
 
-  <div class="container d-flex justify-content-around" id="comments-section">
+  <div class="comentarios-block mt-4" id="comments-section">
     <div class="comentarios">
         <h2>Painel de Recados!</h2>
+        <hr>
       <% @comments.each do |comment| %>
         <p> <%= comment.content %></p>
         <hr>
