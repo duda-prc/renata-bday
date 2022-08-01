@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Birthday info pages!
 
-Things you may want to cover:
+Features:
+* Infos of the event (place / day)
+* Link to RSVP
+* Messages board
+* What to wear
 
-* Ruby version
 
-* System dependencies
+<hr>
+<h3> Infos </h3>
 
-* Configuration
+- Ruby version --> ruby 3.0.3p157
 
-* Database creation
+- Rails version (~> 6.1.6, >= 6.1.6.1)
 
-* Database initialization
+- Simple_form_for 
 
-* How to run the test suite
+- Bootstrap --> 5.2.0
 
-* Services (job queues, cache servers, search engines, etc.)
+- autoprefixer-rails (= 10.2.5)
 
-* Deployment instructions
+- webpacker (5.4.3)
 
-* ...
+- turbolinks (5.2.1)
+
+- PLATFORMS (x86_64-linux)
+
+- Postgresql database (gem 'pg', '~> 1.1')
