@@ -2,6 +2,8 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  height: 70vh;
+  margin-bottom: 150px;
 }
 
 .banner h1 {
@@ -17,4 +19,12 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.banner a {
+  color: white;
+}
+
+.banner a:hover {
+  color: rgba(255, 255, 255, 0.524);
 }

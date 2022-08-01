@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  height: 200px;
+  height: 40vh;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -9,7 +9,7 @@
 
 .card-product img {
   height: 100%;
-  width: 300px;
+  width: 50vw;
   object-fit: cover;
 }
 
@@ -80,6 +80,10 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  .card-product img {
+    width: 300px;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -87,4 +91,9 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  .card-product img {
+    width: 300px;
+  }
+
 }

@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
+<div class="banner" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
   <div class="container">
     <h1>De repente, 18!</h1>
     <p>Confira todos os <em>detalhes</em> desse dia que será <em>inesquecível</em>!</p>
@@ -6,40 +6,45 @@
   </div>
 </div>
 
-<div class="container align-content-center my-5 mx-auto">
-  <div class="card-product">
+<div class="container align-content-center mx-auto">
+  <div class="card-product" data-aos="fade-right">
     <%= image_tag "renata.png", alt:"logo Renata"  %>
     <div class="card-product-infos">
-      <h2>Prazer, Renata!</h2>
+      <h2 class="heading">Prazer, Renata!</h2>
       <p>Carioca de natureza, nascida no berço do calor e do mar 🏖️</p>
       <p>Ansiosa para completar a maioridade, vulgos 18 anos!</p>
     </div>
   </div>
+
   <hr>
-  <div class="container py-3 shadow-sm rounded bg-white my-2" id="infos-section">
-    <h2>Infos da festa</h2>
+
+  <div class="container py-3 shadow-sm rounded bg-white my-2" id="infos-section" data-aos="fade-left">
+    <h2 class="heading">Infos da festa</h2>
     <p>Local: Casa das canoas | Estrada das Canoas, 1246, São Conrado RJ</p>
     <p>Horário: 21:30</p>
     <p>Traje: Passeio completo</p>
   </div>
   <hr>
+
   <p>Mapa do local da festa</p>
+
   <hr>
-  <h2>Exemplos de traje</h2>
+
+  <h2 class="heading">Exemplos de traje</h2>
   <div class="cards my-3">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://aempreendedora.com.br/wp-content/uploads/2017/12/Traje-Formanda-Baile-de-Formatura.jpg)"></div>
+    <div class="card-category" data-aos="fade-down" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://aempreendedora.com.br/wp-content/uploads/2017/12/Traje-Formanda-Baile-de-Formatura.jpg)"></div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://292aa00292a014763d1b-96a84504aed2b25fc1239be8d2b61736.ssl.cf1.rackcdn.com/PostImagem/32496/decifrando-o-dress-code-masculino-do-dia-a-dia-ao-trabalho_o1e0e2jvcpl4l1nhd1gjeo61id3e.png)"></div>
+    <div class="card-category" data-aos="fade-down" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://292aa00292a014763d1b-96a84504aed2b25fc1239be8d2b61736.ssl.cf1.rackcdn.com/PostImagem/32496/decifrando-o-dress-code-masculino-do-dia-a-dia-ao-trabalho_o1e0e2jvcpl4l1nhd1gjeo61id3e.png)"></div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://2.bp.blogspot.com/-Ikr-kTbP4O4/XHViJvtejWI/AAAAAAAAEhA/kkIVUGNFCVYf4cVs2y8-VAIcLy3-nkqCwCLcBGAs/s1600/1551032417642.JPEG)"></div>
+    <div class="card-category" data-aos="fade-down" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://2.bp.blogspot.com/-Ikr-kTbP4O4/XHViJvtejWI/AAAAAAAAEhA/kkIVUGNFCVYf4cVs2y8-VAIcLy3-nkqCwCLcBGAs/s1600/1551032417642.JPEG)"></div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://tudocommoda.com/wp-content/uploads/2016/08/terno-italiano.jpg)"></div>
+    <div class="card-category" data-aos="fade-down" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://tudocommoda.com/wp-content/uploads/2016/08/terno-italiano.jpg)"></div>
   </div>
 
 
-  <div class="comentarios-block mt-4" id="comments-section">
+  <div class="comentarios-block mt-4" id="comments-section" data-aos="fade-right">
     <div class="comentarios">
-        <h2>Painel de Recados!</h2>
+        <h2 class="heading">Painel de Recados!</h2>
         <hr>
       <% @comments.each do |comment| %>
         <p> <%= comment.content %></p>
