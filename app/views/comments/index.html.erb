@@ -18,15 +18,24 @@
 
   <hr>
 
-  <div class="container py-3 shadow-sm rounded bg-white my-2" id="infos-section" data-aos="fade-left">
-    <h2 class="heading">Infos da festa</h2>
-    <p>Local: Casa das canoas | Estrada das Canoas, 1246, São Conrado RJ</p>
-    <p>Horário: 21:30</p>
-    <p>Traje: Passeio completo</p>
-  </div>
+  <h2 class="heading">Informações</h2>
+    <div class="container py-3 my-2 d-flex" id="infos-section" data-aos="fade-left">
+      <div class="date">
+        <p>12 <span>Ago</span></p>
+      </div>
+      <div class="p-4">
+        <p>Local: <strong>Casa das canoas</strong> | Estrada das Canoas, 1246, São Conrado RJ (<%= link_to 'Site', 'https://casadascanoas.com.br/', target:"_blank" %>) </p>
+        <p>Traje: Passeio completo</p>
+      </div>
+    </div>
   <hr>
 
-  <p>Mapa do local da festa</p>
+   <h2 class="heading">Local</h2>
+    <div class="container my-2" data-aos="fade-left">
+      <%= link_to 'https://www.google.com/maps/place/Casa+das+Canoas+Casa+de+Festas+RJ/@-22.9934716,-43.2753764,15z/data=!4m2!3m1!1s0x0:0x1950efe5469a4f12?sa=X&ved=2ahUKEwiBvOmM-KX5AhXZJrkGHdDjAScQ_BJ6BAheEAU',target:"_blank" do  %>
+        <%= image_tag 'https://static.wixstatic.com/media/2c6d47_58ea0d0f425740e89a8d199a95b0fa54.jpg/v1/fill/w_632,h_354,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/2c6d47_58ea0d0f425740e89a8d199a95b0fa54.jpg', alt:'foto local' %>
+      <% end %>
+    </div>
 
   <hr>
 
@@ -47,15 +56,29 @@
         <h2 class="heading">Painel de Recados!</h2>
         <hr>
       <% @comments.each do |comment| %>
-        <p> <%= comment.content %></p>
+        <p class="mb-0"> <%= comment.content %></p>
+        <p>By:<span class="heading"><%= comment.user  %></span></p>
         <hr>
       <% end %>
     </div>
     <div class="comentarios-form m-5">
       <%= simple_form_for(@comment)  do |f| %>
         <%= f.input :content, label:'Recado' %>
+        <%= f.input :user, label:'Nome' %>
         <%= f.submit  class: "btn btn-primary", value:'Deixe um recado!' %>
       <% end %>
     </div>
   </div>
 </div>
+
+<div class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/duda-prc/renata-bday" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/renataprimo_/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/renata.primo.94" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/eduarda-pr-campos/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Made by Duda with lots of <i class="fas fa-heart"></i>!
+    </div>
+  </div>
