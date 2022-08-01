@@ -26,8 +26,13 @@
   </div>
   <hr>
 
-  <p>Mapa do local da festa</p>
-
+  <h2 class="heading">Local</h2>
+  <div style="width: 100%; height: 600px;"
+  data-controller="mapbox"
+  id="map"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
   <hr>
 
   <h2 class="heading">Exemplos de traje</h2>
