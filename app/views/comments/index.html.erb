@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
+<div class="banner" data-aos="fade-down" data-controller="aos-js" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
   <div class="container">
     <h1>De repente, 18!</h1>
     <p>Confira todos os <em>detalhes</em> desse dia que será <em>inesquecível</em>!</p>
@@ -53,4 +53,24 @@
       <% end %>
     </div>
   </div>
+
+  <%# <h2>Log in</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%# <div class="form-inputs">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%# <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%# <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%# </div>
+
+    <div class="form-actions"> %>
+      <%# <%= f.button :submit, "Log in" %>
+    <%# </div>
+  <% end %>
+
 </div>
