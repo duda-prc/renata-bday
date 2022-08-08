@@ -23,9 +23,20 @@
 }
 
 .footer-links a:hover {
-  opacity: 1;
+  color: rgba(246, 148, 129, 0.5);
+  opacity: 0.9;
 }
 
 .footer .fa-heart {
-  color: #D23333;
+  color: rgba(246, 148, 129, 0.5);
+}
+
+.footer-copyright a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-copyright a:hover {
+  color: rgba(246, 148, 129, 0.5);
+  opacity: 0.9;
 }

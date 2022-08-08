@@ -56,13 +56,13 @@
         <h2 class="heading">Painel de Recados!</h2>
         <hr>
       <% @comments.each do |comment| %>
-        <p class="mb-0"> <%= comment.content %></p>
-        <p>By:<span class="heading"><%= comment.user  %></span></p>
+        <p class="mb-0" id="comment-<%= comment.id %>"> <%= comment.content %></p>
+        <p>By:<span class="heading"><%= comment.user %></span></p>
         <hr>
       <% end %>
     </div>
     <div class="comentarios-form m-5">
-      <%= simple_form_for(@comment)  do |f| %>
+      <%= simple_form_for(@comment, remote: true) do |f| %>
         <%= f.input :content, label:'Recado' %>
         <%= f.input :user, label:'Nome' %>
         <%= f.submit  class: "btn btn-primary", value:'Deixe um recado!' %>
@@ -79,6 +79,6 @@
       <a href="https://www.linkedin.com/in/eduarda-pr-campos/" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
     <div class="footer-copyright">
-      Made by Duda with lots of <i class="fas fa-heart"></i>!
+      Made by <em> <%= link_to 'Duda', 'https://duda-prc.github.io/profile/' %></em> with lots of <i class="fas fa-heart"></i> !
     </div>
   </div>

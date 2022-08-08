@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      redirect_to comments_path
+      redirect_to comments_path(anchor: "comment-#{@comment.id}")
     else
       @comments = Comment.all
       render :index
